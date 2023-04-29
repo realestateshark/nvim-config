@@ -1,8 +1,8 @@
 # Neovim Config
 This is my personal Neovim config for web development.
 - [Neovim install from source](#neovim-install-from-source) 
-- [Neovim config](neovim-config)
-- [Commands](commands)
+- [Neovim config](#neovim-config)
+- [Commands](#commands)
 
 ## Requirements
 1. Neovim >= 0.8
@@ -36,8 +36,16 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ```
 
 ## Commands
+### Useful Commands
+#### Window navigation
+Split window horizontal `:split` or vertical `:vspilt`.
+- `Ctrl-w h` Jump to left window
+- `Ctrl-w j` Jump to bottom window
+- `Ctrl-w k` Jump to top window
+- `Ctrl-w l` Jump to right window
+### Command overview
 Display command list index for visual mode.
 ```sh
 :help visual-index
 ```
-There are more modes like normal, insert, etc. For further information please visit [Neovim mode index doc](https://neovim.io/doc/user/vimindex.html)
+There are more modes like normal, insert, etc. For further information please visit [Neovim mode index doc](https://neovim.io/doc/user/vimindex.html).
