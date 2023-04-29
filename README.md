@@ -51,9 +51,9 @@ Split window horizontal `:split` or vertical `:vspilt`.
 
 ### Buffer
 #### Navigation
-Navigate between open files
-- `Shift-l` Height increase
-- `Shift-h` Height decrease
+Jump between open files
+- `Shift-l` Next file
+- `Shift-h` Previous file
 
 ## Command overview
 Display command list index for visual mode.
