@@ -2,7 +2,7 @@
 This is my personal Neovim config for web development.
 - [Neovim install from source](#neovim-install-from-source) 
 - [Neovim config](#neovim-config)
-- [Commands](#commands)
+- [Custom Shortcuts](#custom-shortcuts)
 
 ## Requirements
 1. Neovim >= 0.8
@@ -35,16 +35,27 @@ cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ```
 
-## Commands
-### Useful Commands
-#### Window navigation
+## Custom Shortcuts
+### Window
 Split window horizontal `:split` or vertical `:vspilt`.
-##### Normal mode
+#### Navigation
 - `Ctrl-h` Jump to left window
 - `Ctrl-j` Jump to bottom window
 - `Ctrl-k` Jump to top window
 - `Ctrl-l` Jump to right window
-### Command overview
+#### Resize
+- `Ctrl-↑` Height increase
+- `Ctrl-↓` Height decrease
+- `Ctrl-→` Width increase
+- `Ctrl-←` Width decrease
+
+### Buffer
+#### Navigation
+Navigate between open files
+- `Shift-l` Height increase
+- `Shift-h` Height decrease
+
+## Command overview
 Display command list index for visual mode.
 ```sh
 :help visual-index
