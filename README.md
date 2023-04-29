@@ -39,6 +39,7 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ### Useful Commands
 #### Window navigation
 Split window horizontal `:split` or vertical `:vspilt`.
+##### Normal mode
 - `Ctrl-h` Jump to left window
 - `Ctrl-j` Jump to bottom window
 - `Ctrl-k` Jump to top window
