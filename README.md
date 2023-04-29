@@ -38,13 +38,13 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ## Custom Shortcuts
 ### Window
 Split window horizontal `:split` or vertical `:vspilt`.
-#### Navigation
+#### Window navigation
 Jump between split windows
 - `Ctrl-h` Left window
 - `Ctrl-j` Bottom window
 - `Ctrl-k` Top window
 - `Ctrl-l` Right window
-#### Resize
+#### Window resize
 Split window adjust size
 - `Ctrl-↑` Height increase
 - `Ctrl-↓` Height decrease
@@ -52,10 +52,20 @@ Split window adjust size
 - `Ctrl-←` Width decrease
 
 ### Buffer
-#### Navigation
-Jump between open files
+#### Navigate between open files
 - `Shift-l` Next file
 - `Shift-h` Previous file
+
+### Editor
+#### Indent Code
+- `>` indent block
+- `<` indent block reverse
+#### Move Code
+- `Alt-k` Move up
+- `Alt-j` Move down
+
+### Terminal
+- `Esc` Toggle to normal mode
 
 ## Command overview
 Display command list index for visual mode.
