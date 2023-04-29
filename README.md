@@ -39,11 +39,13 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ### Window
 Split window horizontal `:split` or vertical `:vspilt`.
 #### Navigation
-- `Ctrl-h` Jump to left window
-- `Ctrl-j` Jump to bottom window
-- `Ctrl-k` Jump to top window
-- `Ctrl-l` Jump to right window
+Jump between split windows
+- `Ctrl-h` Left window
+- `Ctrl-j` Bottom window
+- `Ctrl-k` Top window
+- `Ctrl-l` Right window
 #### Resize
+Split window adjust size
 - `Ctrl-↑` Height increase
 - `Ctrl-↓` Height decrease
 - `Ctrl-→` Width increase
