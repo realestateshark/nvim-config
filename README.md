@@ -49,7 +49,7 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 - `Shift-l` Next file
 - `Shift-h` Previous file
 
-### Editor
+### Code
 #### Indent Code
 - `>` indent block
 - `<` indent block reverse
