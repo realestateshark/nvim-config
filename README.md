@@ -1,5 +1,6 @@
 # Neovim Config
-This is my personal Neovim config for web development.
+This is my personal Neovim config for web development.\
+The goal is to keep this config clean and easy.
 - [Neovim install from source](#neovim-install-from-source) 
 - [Neovim config](#neovim-config)
 - [Custom Shortcuts](#custom-shortcuts)
@@ -36,20 +37,11 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ```
 
 ## Custom Shortcuts
-### Window
-Split window horizontal `:split` or vertical `:vspilt`.
-#### Window navigation
-Jump between split windows
-- `Ctrl-h` Left window
-- `Ctrl-j` Bottom window
-- `Ctrl-k` Top window
-- `Ctrl-l` Right window
-#### Window resize
-Split window adjust size
-- `Ctrl-↑` Height increase
-- `Ctrl-↓` Height decrease
-- `Ctrl-→` Width increase
-- `Ctrl-←` Width decrease
+
+### Auto-Completion
+- `Tab` Next suggestion
+- `Shift-Tab` Previous suggestion
+- `Enter` Confirm suggestion
 
 ### Buffer
 #### Navigate between open files
@@ -66,6 +58,21 @@ Split window adjust size
 
 ### Terminal
 - `Esc` Toggle to normal mode
+
+### Window
+Split window horizontal `:split` or vertical `:vspilt`.
+#### Window navigation
+Jump between split windows
+- `Ctrl-h` Left window
+- `Ctrl-j` Bottom window
+- `Ctrl-k` Top window
+- `Ctrl-l` Right window
+#### Window resize
+Split window adjust size
+- `Ctrl-↑` Height increase
+- `Ctrl-↓` Height decrease
+- `Ctrl-→` Width increase
+- `Ctrl-←` Width decrease
 
 ## Command overview
 Display command list index for visual mode.
