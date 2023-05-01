@@ -37,9 +37,20 @@ packer.init {
   },
 }
 
--- My plugins to install
+-- Plugins to install
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
+
+   -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- Auto completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completion extention
+  use "hrsh7th/cmp-path" -- path completion extention
+  use "hrsh7th/cmp-cmdline" -- cmdline completion extention
+  use "saadparwaiz1/cmp_luasnip" -- snippet completion extention
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- snippets for bunch of language
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
