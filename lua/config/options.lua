@@ -5,5 +5,6 @@ vim.opt.shiftwidth = 2 -- number of spaces for each indentation
 vim.opt.mouse = "" -- mouse is disabled
 vim.opt.tabstop = 2 -- number of spaces spaces for a tab
 vim.opt.number = true -- turn on line numbering
+vim.opt.relativenumber = true -- turn on relative line numbering
 vim.opt.signcolumn = "yes" -- avoid shift text
 vim.opt.linebreak = true -- wrap without split words
