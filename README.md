@@ -42,6 +42,7 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 - `Tab` Next suggestion
 - `Shift-Tab` Previous suggestion
 - `Enter` Confirm suggestion
+- `Ctrl-e` Abort suggestions
 
 ### Buffer
 #### Navigate between open files
