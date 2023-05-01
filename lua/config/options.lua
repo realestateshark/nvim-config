@@ -8,3 +8,4 @@ vim.opt.number = true -- turn on line numbering
 vim.opt.relativenumber = true -- turn on relative line numbering
 vim.opt.signcolumn = "yes" -- avoid shift text
 vim.opt.linebreak = true -- wrap without split words
+vim.opt.termguicolors = true -- full usage of terminal colors
