@@ -47,10 +47,19 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completion extention
   use "hrsh7th/cmp-cmdline" -- cmdline completion extention
   use "saadparwaiz1/cmp_luasnip" -- snippet completion extention
+  use "hrsh7th/cmp-nvim-lsp" -- lsp extention
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- snippets for bunch of language
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use {
+    "williamboman/mason.nvim", -- simple to use language server installer
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+  }
+  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

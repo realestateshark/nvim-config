@@ -1,5 +1,7 @@
 require("config.options")
-require("config.keymaps")
 require("config.plugins")
 require("config.cmp")
 require("config.colorscheme")
+require("config.lsp-config")
+require("config.lsp-mason")
+require("config.keymaps")
