@@ -61,11 +61,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 keymap("v", "<", "<gv", options)
 keymap("v", ">", ">gv", options)
 
--- Visual Block --
---- Move text up and down
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", options)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", options)
-
 -- Terminal Mode --
 --- Switch to normal mode
 keymap("t", "<Esc>", "<C-\\><C-n>", options)
+keymap("n", "<C-p>", "<cmd>lua require('legendary').find()<CR>", { noremap = true, silent = true })

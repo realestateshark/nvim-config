@@ -41,7 +41,12 @@ packer.init {
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
-   -- cmp plugins
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = { {"nvim-lua/plenary.nvim"} }
+  }
+
+  -- cmp plugins
   use "hrsh7th/nvim-cmp" -- Auto completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completion extention
   use "hrsh7th/cmp-path" -- path completion extention
@@ -49,7 +54,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completion extention
   use "hrsh7th/cmp-nvim-lsp" -- lsp extention
 
-  -- snippets
+  -- Snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- snippets for bunch of language
 
@@ -60,6 +65,16 @@ return packer.startup(function(use)
     run = ":MasonUpdate" -- :MasonUpdate updates registry contents
   }
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+
+  -- Keymaps
+  use {
+    "mrjones2014/legendary.nvim",
+    keys = { [[<C-p>]] },
+    config = function()
+      require("config.legendary").setup()
+    end,
+    requires = { "stevearc/dressing.nvim" }
+  }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
