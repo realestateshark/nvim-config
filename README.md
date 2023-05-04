@@ -1,6 +1,9 @@
 # Neovim Config
 This is my personal Neovim config for web development.\
 The goal is to keep this config clean and easy.
+
+Credit goes to [neovim from scrach](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ) series.
+
 - [Neovim install from source](#neovim-install-from-source) 
 - [Neovim config](#neovim-config)
 - [Custom Shortcuts](#custom-shortcuts)
