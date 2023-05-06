@@ -85,6 +85,18 @@ return packer.startup(function(use)
       require("nvim-autopairs").setup {}
     end
   }
+
+  -- Explorer
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end
+  }
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
