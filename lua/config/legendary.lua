@@ -26,10 +26,12 @@ function M.setup()
       { "<S-l>", { n = ":bnext<CR>" }, description = "Next open file", default_opts },
       { "<S-h>", { n = ":bprevious<CR>"}, description = "Previous open file", default_opts },
       -- LSP Errors
-      { "<space>e", { n = vim.diagnostic.open_float }, description = "Open error box"},
-      { "<space>q", { n = vim.diagnostic.setloclist }, description = "Open error list"},
-      { "[d", { n = vim.diagnostic.goto_prev }, description = "Goto previous error"},
-      { "]d", { n = vim.diagnostic.goto_next }, description = "Goto next error"},
+      { "ep", { n = vim.diagnostic.open_float }, description = "Open error popup", default_opts },
+      { "el", { n = vim.diagnostic.setloclist }, description = "Open error list", default_opts },
+      { "ek", { n = vim.diagnostic.goto_prev }, description = "Goto previous error", default_opts },
+      { "ej", { n = vim.diagnostic.goto_next }, description = "Goto next error", default_opts },
+      -- Explorer
+      { "<C-e>", { n = ":NvimTreeToggle<CR>"}, description = "Open or close explorer", default_opts },
     }
   }
   keymap("n", "<C-p>", "<cmd>lua require('legendary').find()<CR>", default_opts)
