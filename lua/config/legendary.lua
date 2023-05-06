@@ -22,6 +22,14 @@ function M.setup()
       -- Indent lines
       { "<", { v = "<gv" }, description = "Indent left", default_opts},
       { ">", { v = ">gv" }, description = "Indent right", default_opts},
+      -- Switch between open files
+      { "<S-l>", { n = ":bnext<CR>" }, description = "Next open file", default_opts },
+      { "<S-h>", { n = ":bprevious<CR>"}, description = "Previous open file", default_opts },
+      -- LSP Errors
+      { "<space>e", { n = vim.diagnostic.open_float }, description = "Open error box"},
+      { "<space>q", { n = vim.diagnostic.setloclist }, description = "Open error list"},
+      { "[d", { n = vim.diagnostic.goto_prev }, description = "Goto previous error"},
+      { "]d", { n = vim.diagnostic.goto_next }, description = "Goto next error"},
     }
   }
   keymap("n", "<C-p>", "<cmd>lua require('legendary').find()<CR>", default_opts)
