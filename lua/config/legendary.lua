@@ -19,6 +19,9 @@ function M.setup()
       -- Move lines
       { "<A-k>", { x = ":move '<-2<CR>gv-gv" }, description = "Move lines up", default_opts },
       { "<A-j>", { x = ":move '>+1<CR>gv-gv" }, description = "Move lines down", default_opts },
+      -- Indent lines
+      { "<", { v = "<gv" }, description = "Indent left", default_opts},
+      { ">", { v = ">gv" }, description = "Indent right", default_opts},
     }
   }
   keymap("n", "<C-p>", "<cmd>lua require('legendary').find()<CR>", default_opts)

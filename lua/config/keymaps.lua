@@ -46,11 +46,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
--- Visual Mode --
---- Stay in indent mode
-keymap("v", "<", "<gv", options)
-keymap("v", ">", ">gv", options)
-
 -- Terminal Mode --
 --- Switch to normal mode
 keymap("t", "<Esc>", "<C-\\><C-n>", options)
