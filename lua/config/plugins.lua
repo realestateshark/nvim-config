@@ -72,7 +72,6 @@ return packer.startup(function(use)
   -- Keymaps
   use {
     "mrjones2014/legendary.nvim",
-    keys = { [[<C-p>]] },
     config = function()
       require("config.legendary").setup()
     end,

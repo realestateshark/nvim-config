@@ -3,16 +3,6 @@ local options = {noremap = true}
 local keymap = vim.api.nvim_set_keymap
 
 -- Normal Mode --
---- Window Navigation
-keymap("n", "<C-h>", "<C-w>h", options);
-keymap("n", "<C-j>", "<C-w>j", options);
-keymap("n", "<C-k>", "<C-w>k", options);
-keymap("n", "<C-l>", "<C-w>l", options);
---- Window Resize
-keymap("n", "<C-Up>", ":resize +10<CR>", options)
-keymap("n", "<C-Down>", ":resize -10<CR>", options)
-keymap("n", "<C-Left>", ":vertical resize -10<CR>", options)
-keymap("n", "<C-Right>", ":vertical resize +10<CR>", options)
 --- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", options)
 keymap("n", "<S-h>", ":bprevious<CR>", options)
@@ -40,7 +30,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', 'gK', vim.lsp.buf.signature_help, opts)
     vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
     vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
     vim.keymap.set('n', '<space>wl', function()
@@ -64,4 +54,3 @@ keymap("v", ">", ">gv", options)
 -- Terminal Mode --
 --- Switch to normal mode
 keymap("t", "<Esc>", "<C-\\><C-n>", options)
-keymap("n", "<C-p>", "<cmd>lua require('legendary').find()<CR>", { noremap = true, silent = true })
