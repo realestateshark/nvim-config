@@ -78,6 +78,13 @@ return packer.startup(function(use)
     requires = { "stevearc/dressing.nvim" }
   }
 
+  -- Autopairs
+  use {
+	"windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
+  }
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
