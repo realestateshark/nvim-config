@@ -40,6 +40,7 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ```
 
 ## Custom Shortcuts
+- `Ctrl-p` Command Palette
 
 ### Auto-Completion
 - `Tab` Next suggestion
