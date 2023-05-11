@@ -73,7 +73,7 @@ return packer.startup(function(use)
   use {
     "mrjones2014/legendary.nvim",
     config = function()
-      require("config.legendary").setup()
+      require("config.keymaps").setup()
     end,
     requires = { "stevearc/dressing.nvim" }
   }
