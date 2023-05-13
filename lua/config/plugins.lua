@@ -55,14 +55,19 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completion extention
   use "hrsh7th/cmp-cmdline" -- cmdline completion extention
   use "saadparwaiz1/cmp_luasnip" -- snippet completion extention
-  use "hrsh7th/cmp-nvim-lsp" -- lsp extention
 
   -- Snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- snippets for bunch of language
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
+  use {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("config.lsp-config").setup()
+    end,
+    requires = { "hrsh7th/cmp-nvim-lsp" }
+  }
   use {
     "williamboman/mason.nvim", -- simple to use language server installer
     run = ":MasonUpdate" -- :MasonUpdate updates registry contents
@@ -82,7 +87,7 @@ return packer.startup(function(use)
   use {
 	"windwp/nvim-autopairs",
     config = function()
-      require("nvim-autopairs").setup {}
+      require("nvim-autopairs").setup({})
     end
   }
 
@@ -93,7 +98,7 @@ return packer.startup(function(use)
       'nvim-tree/nvim-web-devicons',
     },
     config = function()
-      require("nvim-tree").setup {}
+      require("nvim-tree").setup({})
     end
   }
 
