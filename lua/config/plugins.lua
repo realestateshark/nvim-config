@@ -49,13 +49,6 @@ return packer.startup(function(use)
     requires = { {"nvim-lua/plenary.nvim"} }
   }
 
-  -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- Auto completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completion extention
-  use "hrsh7th/cmp-path" -- path completion extention
-  use "hrsh7th/cmp-cmdline" -- cmdline completion extention
-  use "saadparwaiz1/cmp_luasnip" -- snippet completion extention
-
   -- Snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- snippets for bunch of language
@@ -64,15 +57,34 @@ return packer.startup(function(use)
   use {
     "neovim/nvim-lspconfig",
     config = function()
-      require("config.lsp-config").setup()
+      require("config.lsp").setup()
     end,
     requires = { "hrsh7th/cmp-nvim-lsp" }
   }
+
   use {
     "williamboman/mason.nvim", -- simple to use language server installer
-    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+    run = ":MasonUpdate", -- :MasonUpdate updates registry contents
+    requires = {
+      "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+    }
   }
-  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+
+  -- Completion
+  use {
+    "hrsh7th/nvim-cmp",
+    config = function()
+      require("config.completion").setup()
+    end,
+    requires = {
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-cmdline",
+      "saadparwaiz1/cmp_luasnip"
+    }
+  }
 
   -- Keymaps
   use {
