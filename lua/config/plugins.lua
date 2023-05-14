@@ -70,6 +70,9 @@ return packer.startup(function(use)
   use {
     "williamboman/mason.nvim", -- simple to use language server installer
     run = ":MasonUpdate", -- :MasonUpdate updates registry contents
+    config = function()
+      require("config.lsp-mason").setup()
+    end,
     requires = {
       "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
     }

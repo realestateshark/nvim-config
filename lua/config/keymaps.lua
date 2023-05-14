@@ -63,7 +63,7 @@ function M.setup()
         keymaps = {
           { "gD", { n = vim.lsp.buf.declaration }, description = "Goto declaration", lsp_options },
           { "gd", { n = vim.lsp.buf.definition }, description = "Goto definition", lsp_options },
-          { "K", { n = vim.lsp.buf.hover }, description = "Popup", lsp_options },
+          { "K", { n = vim.lsp.buf.hover }, description = "Show definition", lsp_options },
           { "gi", { n = vim.lsp.buf.implementation }, description = "Goto implementation", lsp_options },
           { "gK", { n = vim.lsp.buf.signature_help}, description = "Signature", lsp_options },
         }
