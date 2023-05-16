@@ -105,7 +105,7 @@ return packer.startup(function(use)
 
   -- Autopairs
   use {
-	"windwp/nvim-autopairs",
+	  "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup({})
     end
@@ -113,13 +113,19 @@ return packer.startup(function(use)
 
   -- Explorer
   use {
-    'nvim-tree/nvim-tree.lua',
+    "nvim-tree/nvim-tree.lua",
     requires = {
-      'nvim-tree/nvim-web-devicons',
+      "nvim-tree/nvim-web-devicons",
     },
     config = function()
       require("nvim-tree").setup({})
     end
+  }
+
+  -- Statusline
+  use {
+	  "jssteinberg/hackline.vim",
+  	requires = { "itchyny/vim-gitbranch" },
   }
 
   if PACKER_BOOTSTRAP then
