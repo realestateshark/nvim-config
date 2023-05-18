@@ -45,27 +45,18 @@ function M.setup()
       -- Enable completion triggered by <c-x><c-o>
       vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-      -- See `:help vim.lsp.*` for documentation on any of the below functions
-      vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, lsp_options)
-      vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, lsp_options)
-      vim.keymap.set('n', '<space>wl', function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-      end, lsp_options)
-      vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, lsp_options)
-      vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, lsp_options)
-      vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, lsp_options)
-      vim.keymap.set('n', 'gr', vim.lsp.buf.references, lsp_options)
-      vim.keymap.set('n', '<space>f', function()
-        vim.lsp.buf.format { async = true }
-      end, opts)
-
       require("legendary").setup {
         keymaps = {
-          { "gD", { n = vim.lsp.buf.declaration }, description = "Goto declaration", lsp_options },
-          { "gd", { n = vim.lsp.buf.definition }, description = "Goto definition", lsp_options },
-          { "gi", { n = vim.lsp.buf.implementation }, description = "Goto implementation", lsp_options },
-          { "dd", { n = vim.lsp.buf.hover }, description = "Displays definition", lsp_options },
-          { "ds", { n = vim.lsp.buf.signature_help }, description = "Displays signature", lsp_options },
+          { "jd", { n = vim.lsp.buf.declaration }, description = "lsp jump to declaration", lsp_options },
+          { "jt", { n = vim.lsp.buf.type_definition }, description = "lsp jump to type definition", lsp_options },
+          { "ji", { n = vim.lsp.buf.implementation }, description = "lsp jump to implementation", lsp_options },
+          { "dd", { n = vim.lsp.buf.hover }, description = "lsp display definition", lsp_options },
+          { "ds", { n = vim.lsp.buf.signature_help }, description = "lsp display signature", lsp_options },
+          { "rr", { n = vim.lsp.buf.rename }, description = "lsp rename references", lsp_options },
+          { "ff", { n = vim.lsp.buf.format }, description = "lsp format file", lsp_options },
+          { "ca", { n = vim.lsp.buf.code_action }, description = "lsp code action", lsp_options },
+          { "dl", { n = vim.lsp.codelens.display }, description = "lsp display codelens", lsp_options },
+          { "rl", { n = vim.lsp.codelens.run }, description = "lsp run codelens", lsp_options },
         }
       }
     end
