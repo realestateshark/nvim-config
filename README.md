@@ -35,9 +35,12 @@ cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 [Complete Neovim installation manual](https://github.com/neovim/neovim/wiki/Building-Neovim)
 
 ## Neovim config
+### Github
 ```sh
 git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 ```
+### Activate PHP intelephense LSP
+Add your licence key into the following file `USER_FOLDER/intelephense/licence.txt`.
 
 ## Custom Shortcuts
 - `Ctrl-p` Command Palette
@@ -60,7 +63,9 @@ git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
 #### Move Code
 - `Alt-k` Move up
 - `Alt-j` Move down
-
+### LSP
+- `Ctrl-o` Jump back
+- `Ctrl-i` Jump forward
 ### Terminal
 - `Esc` Toggle to normal mode
 
