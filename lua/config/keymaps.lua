@@ -1,6 +1,8 @@
 local M = {}
 local default_opts = { noremap = true }
 
+vim.g.mapleader = " "
+
 function M.setup()
   require("legendary").setup {
     keymaps = {
@@ -24,26 +26,26 @@ function M.setup()
       { "<S-l>", { n = ":bnext<CR>" }, description = "Next open file", default_opts },
       { "<S-h>", { n = ":bprevious<CR>"}, description = "Previous open file", default_opts },
       -- LSP diagnostics
-      { "dp", { n = vim.diagnostic.open_float }, description = "Open diagnostic error popup", default_opts },
-      { "dl", { n = vim.diagnostic.setloclist }, description = "Open diagnostic error list", default_opts },
-      { "dk", { n = vim.diagnostic.goto_prev }, description = "Goto previous diagnostic error", default_opts },
-      { "dj", { n = vim.diagnostic.goto_next }, description = "Goto next diagnostic error", default_opts },
+      { "<leader>dp", { n = vim.diagnostic.open_float }, description = "Open diagnostic error popup", default_opts },
+      { "<leader>dl", { n = vim.diagnostic.setloclist }, description = "Open diagnostic error list", default_opts },
+      { "<leader>dk", { n = vim.diagnostic.goto_prev }, description = "Goto previous diagnostic error", default_opts },
+      { "<leader>dj", { n = vim.diagnostic.goto_next }, description = "Goto next diagnostic error", default_opts },
       -- Explorer
       { "<C-e>", { n = ":NvimTreeToggle<CR>"}, description = "Open or close explorer", default_opts },
       -- Telescope
-      { "<C-f>", ":Telescope<CR>", description = "open telescope", default_opts },
-      { "<C-f>f", ":Telescope find_files<CR>", description = "Telescope find files", default_opts },
-      { "<C-f>g", ":Telescope live_grep<CR>", description = "Telescope find in files", default_opts },
-      { "<C-f>b", ":Telescope buffers<CR>", description = "Telescope list open files", default_opts },
+      { "<leader>f", ":Telescope<CR>", description = "open telescope", default_opts },
+      { "<leader>ff", ":Telescope find_files<CR>", description = "Telescope find files", default_opts },
+      { "<leader>fg", ":Telescope live_grep<CR>", description = "Telescope find in files", default_opts },
+      { "<leader>fb", ":Telescope buffers<CR>", description = "Telescope list open files", default_opts },
       -- Legendary
       { "<C-p>", { n = function() require('legendary').find() end }, description = "Legendary command palette", default_opts },
       -- Terminal
-      { "<C-t>", { n = function() NTGlobal["terminal"]:toggle() end }, description = "Toggle terminal", default_opts },
-      { "<C-t>1", { n = function() NTGlobal["terminal"]:open(1) end }, description = "Open terminal 1", default_opts },
-      { "<C-t>2", { n = function() NTGlobal["terminal"]:open(2) end }, description = "Open terminal 1", default_opts },
-      { "<C-t>3", { n = function() NTGlobal["terminal"]:open(3) end }, description = "Open terminal 3", default_opts },
-      { "<C-t>4", { n = function() NTGlobal["terminal"]:open(4) end }, description = "Open terminal 4", default_opts },
-      { "<C-t>5", { n = function() NTGlobal["terminal"]:open(5) end }, description = "Open terminal 5", default_opts },
+      { "<leader>tt", { n = function() NTGlobal["terminal"]:toggle() end }, description = "Toggle terminal", default_opts },
+      { "<leader>t1", { n = function() NTGlobal["terminal"]:open(1) end }, description = "Open terminal 1", default_opts },
+      { "<leader>t2", { n = function() NTGlobal["terminal"]:open(2) end }, description = "Open terminal 1", default_opts },
+      { "<leader>t3", { n = function() NTGlobal["terminal"]:open(3) end }, description = "Open terminal 3", default_opts },
+      { "<leader>t4", { n = function() NTGlobal["terminal"]:open(4) end }, description = "Open terminal 4", default_opts },
+      { "<leader>t5", { n = function() NTGlobal["terminal"]:open(5) end }, description = "Open terminal 5", default_opts },
     }
   }
 
@@ -60,14 +62,14 @@ function M.setup()
 
       require("legendary").setup {
         keymaps = {
-          { "lD", { n = vim.lsp.buf.declaration }, description = "lsp jump to declaration", lsp_options },
-          { "lt", { n = vim.lsp.buf.type_definition }, description = "lsp jump to type definition", lsp_options },
-          { "li", { n = vim.lsp.buf.implementation }, description = "lsp jump to implementation", lsp_options },
-          { "ld", { n = vim.lsp.buf.hover }, description = "lsp display definition", lsp_options },
-          { "ls", { n = vim.lsp.buf.signature_help }, description = "lsp display signature", lsp_options },
-          { "lr", { n = vim.lsp.buf.rename }, description = "lsp rename references", lsp_options },
-          { "lf", { n = vim.lsp.buf.format }, description = "lsp format file", lsp_options },
-          { "la", { n = vim.lsp.buf.code_action }, description = "lsp code action", lsp_options },
+          { "<leader>lD", { n = vim.lsp.buf.declaration }, description = "lsp jump to declaration", lsp_options },
+          { "<leader>lt", { n = vim.lsp.buf.type_definition }, description = "lsp jump to type definition", lsp_options },
+          { "<leader>li", { n = vim.lsp.buf.implementation }, description = "lsp jump to implementation", lsp_options },
+          { "<leader>ld", { n = vim.lsp.buf.hover }, description = "lsp display definition", lsp_options },
+          { "<leader>ls", { n = vim.lsp.buf.signature_help }, description = "lsp display signature", lsp_options },
+          { "<leader>lr", { n = vim.lsp.buf.rename }, description = "lsp rename references", lsp_options },
+          { "<leader>lf", { n = vim.lsp.buf.format }, description = "lsp format file", lsp_options },
+          { "<leader>la", { n = vim.lsp.buf.code_action }, description = "lsp code action", lsp_options },
         }
       }
     end
