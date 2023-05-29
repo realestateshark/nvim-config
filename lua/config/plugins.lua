@@ -49,6 +49,7 @@ return packer.startup(function(use)
     end
   }
 
+  -- Telescope
   use {
     "nvim-telescope/telescope.nvim",
     requires = { {"nvim-lua/plenary.nvim"} }
@@ -130,14 +131,41 @@ return packer.startup(function(use)
 
   -- Terminal
   use {
-      's1n7ax/nvim-terminal',
+      "s1n7ax/nvim-terminal",
       config = function()
           vim.o.hidden = true
-          require('nvim-terminal').setup({
+          require("nvim-terminal").setup({
             disable_default_keymaps = true
           })
       end,
   }
+
+  -- Syntax Highlighting
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "html",
+          "javascript",
+          "jsdoc",
+          "json",
+          "php",
+          "phpdoc",
+          "markdown",
+          "yaml",
+          "lua",
+          "sql",
+          "regex"
+        },
+        highlight = {
+          enable = true
+        }
+      })
+    end
+  }
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
