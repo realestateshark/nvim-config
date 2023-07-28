@@ -20,7 +20,7 @@ sudo apt install git && git clone https://github.com/neovim/neovim
 
 Install build tools
 ```sh
-sudo apt-get install ninja-build gettext cmake unzip curl
+sudo apt-get install ninja-build gettext cmake unzip curl g++
 ```
 
 Build Neovim
