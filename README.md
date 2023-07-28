@@ -13,14 +13,14 @@ Credit goes to [neovim from scrach](https://www.youtube.com/watch?v=ctH-a-1eUME&
 
 ## Neovim install from source
 ### Ubuntu
+Change to the directory, where you want to copy the source files of neovim and clone it from repository.
+```sh
+sudo apt install git && git clone https://github.com/neovim/neovim
+```
+
 Install build tools
 ```sh
 sudo apt-get install ninja-build gettext cmake unzip curl
-```
-
-Clone neovim from repository
-```sh
-git clone https://github.com/neovim/neovim
 ```
 
 Build Neovim
