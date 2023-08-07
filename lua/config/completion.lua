@@ -63,12 +63,17 @@ function M.setup()
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
       ["<Tab>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
+        local copilot_keys = vim.fn['copilot#Accept']()
+        local copilot_enabled = vim.fn['copilot#Enabled']() == 1
+
+        if not copilot_enabled and cmp.visible() then
           cmp.select_next_item()
         elseif luasnip.expandable() then
           luasnip.expand()
         elseif luasnip.expand_or_jumpable() then
           luasnip.expand_or_jump()
+        elseif copilot_enabled and copilot_keys ~= '' and type(copilot_keys) == 'string' then
+          vim.api.nvim_feedkeys(copilot_keys, 'i', true)
         elseif check_backspace() then
           fallback()
         else
