@@ -37,7 +37,7 @@ cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 ## Neovim config
 ### Github
 ```sh
-git clone https://github.com/schillermann/nvim-config.git ~/.config/nvim
+git clone https://github.com/realestateshark/nvim-config.git ~/.config/nvim
 ```
 ## Nerd Fonts
 Pretty popular one is [Hack Fonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack).
