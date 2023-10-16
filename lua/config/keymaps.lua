@@ -28,12 +28,12 @@ function M.setup()
       -- LSP diagnostics
       { "<leader>dp", { n = vim.diagnostic.open_float }, description = "Open diagnostic error popup", opts = default_opts },
       { "<leader>dl", { n = vim.diagnostic.setloclist }, description = "Open diagnostic error list", opts = default_opts },
-      { "<leader>dk", { n = vim.diagnostic.goto_prev }, description = "Goto previous diagnostic error", opts = default_opts },
-      { "<leader>dj", { n = vim.diagnostic.goto_next }, description = "Goto next diagnostic error", opts = default_opts },
+      { "<leader>dp", { n = vim.diagnostic.goto_prev }, description = "Goto previous diagnostic error", opts = default_opts },
+      { "<leader>dn", { n = vim.diagnostic.goto_next }, description = "Goto next diagnostic error", opts = default_opts },
       -- Explorer
       { "<C-e>", { n = ":NvimTreeToggle<CR>"}, description = "Open or close explorer", opts = default_opts },
       -- Telescope
-      { "<leader>f", ":Telescope<CR>", description = "open telescope", opts = default_opts },
+      { "<leader>fc", ":Telescope<CR>", description = "Telescope Commands", opts = default_opts },
       { "<leader>ff", ":Telescope find_files<CR>", description = "Telescope find files", opts = default_opts },
       { "<leader>fg", ":Telescope live_grep<CR>", description = "Telescope find in files", opts = default_opts },
       { "<leader>fb", ":Telescope buffers<CR>", description = "Telescope list open files", opts = default_opts },
@@ -63,13 +63,14 @@ function M.setup()
       require("legendary").setup {
         keymaps = {
           { "<leader>lD", { n = vim.lsp.buf.declaration }, description = "lsp jump to declaration", lsp_options },
-          { "<leader>lt", { n = vim.lsp.buf.type_definition }, description = "lsp jump to type definition", lsp_options },
+          { "<leader>ld", { n = vim.lsp.buf.type_definition }, description = "lsp jump to type definition", lsp_options },
           { "<leader>li", { n = vim.lsp.buf.implementation }, description = "lsp jump to implementation", lsp_options },
-          { "<leader>ld", { n = vim.lsp.buf.hover }, description = "lsp display definition", lsp_options },
+          { "<leader>lk", { n = vim.lsp.buf.hover }, description = "lsp display keyword information", lsp_options },
           { "<leader>ls", { n = vim.lsp.buf.signature_help }, description = "lsp display signature", lsp_options },
           { "<leader>lr", { n = vim.lsp.buf.rename }, description = "lsp rename references", lsp_options },
           { "<leader>lf", { n = vim.lsp.buf.format }, description = "lsp format file", lsp_options },
           { "<leader>la", { n = vim.lsp.buf.code_action }, description = "lsp code action", lsp_options },
+          { "<leader>lR", { n = vim.lsp.buf.references }, description = "lsp references list", lsp_options },
         }
       }
     end
