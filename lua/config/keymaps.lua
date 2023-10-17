@@ -1,5 +1,6 @@
 local M = {}
 local default_opts = { noremap = true }
+local telescope = require('telescope.builtin')
 
 vim.g.mapleader = " "
 
@@ -33,10 +34,11 @@ function M.setup()
       -- Explorer
       { "<C-e>", { n = ":NvimTreeToggle<CR>"}, description = "Open or close explorer", opts = default_opts },
       -- Telescope
-      { "<leader>fc", ":Telescope<CR>", description = "Telescope Commands", opts = default_opts },
-      { "<leader>ff", ":Telescope find_files<CR>", description = "Telescope find files", opts = default_opts },
-      { "<leader>fg", ":Telescope live_grep<CR>", description = "Telescope find in files", opts = default_opts },
-      { "<leader>fb", ":Telescope buffers<CR>", description = "Telescope list open files", opts = default_opts },
+      { "<leader>fc", { n = telescope.builtin }, description = "Telescope Commands", opts = default_opts },
+      { "<leader>ff", { n = telescope.find_files }, description = "Telescope find files", opts = default_opts },
+      { "<leader>fg", { n = telescope.live_grep }, description = "Telescope find in files", opts = default_opts },
+      { "<leader>fb", { n = telescope.buffers }, description = "Telescope list open files", opts = default_opts },
+      { "<leader>fh", { n = telescope.help_tags }, description = "Telescope list open files", opts = default_opts },
       -- Legendary
       { "<C-p>", { n = function() require('legendary').find() end }, description = "Legendary command palette", opts = default_opts },
       -- Terminal
