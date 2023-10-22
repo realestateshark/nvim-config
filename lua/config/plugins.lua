@@ -129,17 +129,6 @@ return packer.startup(function(use)
   	requires = { "itchyny/vim-gitbranch" },
   }
 
-  -- Terminal
-  use {
-      "s1n7ax/nvim-terminal",
-      config = function()
-          vim.o.hidden = true
-          require("nvim-terminal").setup({
-            disable_default_keymaps = true
-          })
-      end,
-  }
-
   -- Syntax Highlighting
   use {
     "nvim-treesitter/nvim-treesitter",
