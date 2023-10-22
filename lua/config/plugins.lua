@@ -140,13 +140,14 @@ return packer.startup(function(use)
           "javascript",
           "jsdoc",
           "json",
+          "lua",
+          "markdown",
           "php",
           "phpdoc",
-          "markdown",
-          "yaml",
-          "lua",
+          "python",
+          "regex",
           "sql",
-          "regex"
+          "yaml",
         },
         highlight = {
           enable = true
