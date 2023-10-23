@@ -1,4 +1,4 @@
 return {
   "jssteinberg/hackline.vim",
-  requires = { "itchyny/vim-gitbranch" },
+  dependencies = { "itchyny/vim-gitbranch" },
 }

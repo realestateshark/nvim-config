@@ -1,6 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  requires = { "hrsh7th/cmp-nvim-lsp" },
+  dependencies = { "hrsh7th/cmp-nvim-lsp" },
   config = function()
     vim.diagnostic.config({
       float = {
@@ -28,5 +28,5 @@ return {
     lspconfig.tsserver.setup {
       capabilities = capabilities
     }
-  end,    
+  end
 }
