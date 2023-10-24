@@ -1,5 +1,6 @@
 return {     
   "mrjones2014/legendary.nvim",
+  dependencies = { "stevearc/dressing.nvim" },
   config = function()
     local default_opts = { noremap = true }
     local telescope = require('telescope.builtin')
@@ -77,7 +78,5 @@ return {
         }
       end
     })
-
-  end,    
-  requires = { "stevearc/dressing.nvim" }
+  end
 }
