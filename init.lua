@@ -40,6 +40,7 @@ local plugins = {
   require("plugin.editor-snippet"),
   require("plugin.editor-cmp"),
   require("plugin.editor-lsp"),
+  require("plugin.editor-outline"),
   require("plugin.editor-autopairs"),
   require("plugin.debug-dap"),
   require("plugin.package-manager-mason"),
