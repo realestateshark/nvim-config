@@ -4,7 +4,7 @@ return {
   config = function()
     require("nvim-tree").setup({
       view = {
-	width = 40,
+        width = 45,
       },
     })
   end
