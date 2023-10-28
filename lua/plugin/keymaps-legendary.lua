@@ -35,13 +35,12 @@ return {
         { "db", { n = dap.toggle_breakpoint }, description = "Debug toggle breakpoint", opts = default_opts },
         { "dt", { n = dap.terminate }, description = "Debug terminate", opts = default_opts },
         -- Files
-        { "<S-l>", { n = ":bnext<CR>" }, description = "Next open file", opts = default_opts },
-        { "<S-h>", { n = ":bprevious<CR>"}, description = "Previous open file", opts = default_opts },
-        { "<S-c>", { n = ":bp|bd#<CR>" }, description = "Close current file", opts = default_opts },
+        { "<Tab>", { n = ":bnext<CR>" }, description = "Next open file", opts = default_opts },
+        { "<S-Tab>", { n = ":bprevious<CR>"}, description = "Previous open file", opts = default_opts },
         { "fc", { n = telescope.builtin }, description = "Telescope Commands", opts = default_opts },
         { "ff", { n = telescope.find_files }, description = "Telescope find files", opts = default_opts },
         { "fg", { n = telescope.live_grep }, description = "Telescope find in files", opts = default_opts },
-        { "fb", { n = telescope.buffers }, description = "Telescope list open files", opts = default_opts },
+        { "fo", { n = telescope.buffers }, description = "Telescope list open files", opts = default_opts },
         { "fs", { n = telescope.git_status }, description = "Telescope list git status", opts = default_opts },
         { "fh", { n = telescope.help_tags }, description = "Telescope help", opts = default_opts },
         -- Explorer
