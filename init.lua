@@ -1,18 +1,5 @@
---
--- Options
---
-vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = { "menuone", "noselect" }
-vim.opt.expandtab = true -- convert tabs to spaces
-vim.opt.shiftwidth = 2 -- number of spaces for each indentation
-vim.opt.mouse = "" -- mouse is disabled
-vim.opt.tabstop = 2 -- number of spaces spaces for a tab
-vim.opt.number = true -- turn on line numbering
-vim.opt.relativenumber = true -- turn on relative line numbering
-vim.opt.signcolumn = "yes" -- avoid shift text
-vim.opt.linebreak = true -- wrap without split words
-vim.opt.termguicolors = true -- full usage of terminal colors
-vim.opt.splitbelow = true
+require("plugin.options")
+require("plugin.commands")
 
 --
 -- Plugins
@@ -38,8 +25,8 @@ local plugins = {
   require("plugin.statusline-hackline"),
   require("plugin.editor-treesitter"),
   require("plugin.editor-snippet"),
-  require("plugin.editor-cmp"),
   require("plugin.editor-lsp"),
+  require("plugin.editor-cmp"),
   require("plugin.editor-outline"),
   require("plugin.editor-autopairs"),
   require("plugin.debug-dap"),
