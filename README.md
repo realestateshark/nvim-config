@@ -61,8 +61,8 @@ Add your licence key into the following file `USER_FOLDER/intelephense/licence.t
 
 ### Buffer
 #### Navigate between open files
-- `Shift-l` Next file
-- `Shift-h` Previous file
+- `Tab` Next file
+- `Tab-Shift` Previous file
 
 ### Code
 #### Indent Code
@@ -71,6 +71,9 @@ Add your licence key into the following file `USER_FOLDER/intelephense/licence.t
 #### Move Code
 - `Alt-k` Move up
 - `Alt-j` Move down
+#### Comment
+- `Ctrl-v` `//` `Esc` Comment
+- `Ctrl-v` `x` Uncomment
 ### LSP
 - `Ctrl-o` Jump back
 - `Ctrl-i` Jump forward
