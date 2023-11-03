@@ -30,6 +30,8 @@ local plugins = {
   require("plugin.editor-outline"),
   require("plugin.editor-autopairs"),
   require("plugin.debug-dap"),
+  require("plugin.editor-jester"),
+  require('plugin.editor-formatter'),
   require("plugin.package-manager-mason"),
 }
 

@@ -39,6 +39,9 @@ cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
 ```sh
 git clone https://github.com/realestateshark/nvim-config.git ~/.config/nvim
 ```
+### Activate PHP intelephense LSP
+Add your licence key into the following file `USER_FOLDER/intelephense/licence.txt`.
+
 ## Nerd Fonts
 Pretty popular one is [Hack Fonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack).
 Download one of the ttf files you want.
@@ -47,8 +50,10 @@ Now you have to set the font in the terminal.
 Open in the terminal menu preferences and then your profile.
 Go to tab text and activate custom font and select your installed font.
 
-### Activate PHP intelephense LSP
-Add your licence key into the following file `USER_FOLDER/intelephense/licence.txt`.
+## Dependencies
+```sh
+npm install -g prettier
+```
 
 ## Custom Shortcuts
 - `Ctrl-p` Command Palette
