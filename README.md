@@ -54,34 +54,41 @@ Go to tab text and activate custom font and select your installed font.
 ```sh
 npm install -g prettier
 ```
+### Clipboard
+Linux Ubuntu 22.04 with Wayland
+```sh
+sudo apt install wl-clipboard
+```
 
 ## Custom Shortcuts
-- `Ctrl-p` Command Palette
+- `Ctrl-P` Command Palette
 
 ### Auto-Completion
 - `Tab` Next suggestion
 - `Shift-Tab` Previous suggestion
 - `Enter` Confirm suggestion
-- `Ctrl-e` Abort suggestions
 
 ### Buffer
 #### Navigate between open files
 - `Tab` Next file
 - `Tab-Shift` Previous file
 
+### Clipboard
+- `"` `+` `Y` Copy to clipboard
+
 ### Code
 #### Indent Code
 - `>` indent block
 - `<` indent block reverse
 #### Move Code
-- `Alt-k` Move up
-- `Alt-j` Move down
+- `Alt-K` Move up
+- `Alt-J` Move down
 #### Comment
-- `Ctrl-v` `//` `Esc` Comment
-- `Ctrl-v` `x` Uncomment
+- `Ctrl-V` `//` `Esc` Comment
+- `Ctrl-V` `x` Uncomment
 ### LSP
-- `Ctrl-o` Jump back
-- `Ctrl-i` Jump forward
+- `Ctrl-O` Jump back
+- `Ctrl-I` Jump forward
 ### Terminal
 - `Esc` Toggle to normal mode
 
@@ -89,10 +96,10 @@ npm install -g prettier
 Split window horizontal `:split` or vertical `:vspilt`.
 #### Window navigation
 Jump between split windows
-- `Ctrl-h` Left window
-- `Ctrl-j` Bottom window
-- `Ctrl-k` Top window
-- `Ctrl-l` Right window
+- `Ctrl-H` Left window
+- `Ctrl-J` Bottom window
+- `Ctrl-K` Top window
+- `Ctrl-L` Right window
 #### Window resize
 Split window adjust size
 - `Ctrl-↑` Height increase
