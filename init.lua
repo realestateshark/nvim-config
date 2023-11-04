@@ -1,5 +1,5 @@
-require("plugin.options")
-require("plugin.commands")
+require("core.options")
+require("core.commands")
 
 --
 -- Plugins
