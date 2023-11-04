@@ -18,6 +18,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = { 
+  require("plugin.package-manager-mason"),
   require("plugin.theme-vscode"),
   require("plugin.explorer-nvim-tree"),
   require("plugin.finder-telescope"),
@@ -29,10 +30,11 @@ local plugins = {
   require("plugin.lsp-nvim-cmp"),
   require("plugin.lsp-symbols-outline"),
   require("plugin.completion-nvim-autopairs"),
+  require('plugin.format-guard'),
   require("plugin.debug-nvim-dap-ui"),
   require("plugin.test-jester"),
-  require('plugin.format-guard'),
-  require("plugin.package-manager-mason"),
+  "almo7aya/openingh.nvim",
+  "github/copilot.vim",
 }
 
 local opts = {}
