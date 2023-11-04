@@ -73,9 +73,6 @@ sudo apt install wl-clipboard
 - `Tab` Next file
 - `Tab-Shift` Previous file
 
-### Clipboard
-- `"` `+` `Y` Copy to clipboard
-
 ### Code
 #### Indent Code
 - `>` indent block
@@ -83,6 +80,8 @@ sudo apt install wl-clipboard
 #### Move Code
 - `Alt-K` Move up
 - `Alt-J` Move down
+#### Clipboard
+- `"` `+` `Y` Copy to clipboard
 #### Comment
 - `Ctrl-V` `//` `Esc` Comment
 - `Ctrl-V` `x` Uncomment
