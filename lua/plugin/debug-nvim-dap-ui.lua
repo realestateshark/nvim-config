@@ -5,12 +5,12 @@ return {
     { "mxsdev/nvim-dap-vscode-js" },
     {
       "microsoft/vscode-js-debug",
-      opt = true,
-      run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+      build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
     }
   },
   config = function()
     require("dap-vscode-js").setup({
+      debugger_path = vim.call("stdpath", "data") .. "/lazy/vscode-js-debug",
       adapters = {
         'pwa-node',
         'pwa-chrome',
