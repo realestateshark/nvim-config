@@ -16,6 +16,7 @@ return {
         "python",
         "regex",
         "sql",
+        "typescript",
         "yaml",
       },
       highlight = {

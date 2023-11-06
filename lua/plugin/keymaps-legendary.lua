@@ -46,6 +46,7 @@ return {
         -- Explorer
         { "et", { n = ":NvimTreeToggle<CR>"}, description = "Open or close explorer", opts = default_opts },
         { "ec", { n = ":NvimTreeFindFile<CR>"}, description = "Select open File in Explorer", opts = default_opts },
+        { "ef", { n = ":NvimTreeFocus<CR>"}, description = "Focus Explorer", opts = default_opts },
         -- Terminal
         { "t", { n = ":split<CR>:term<CR><Cmd>startinsert<CR>"}, description = "Open Terminal", opts = default_opts },
         -- Legendary

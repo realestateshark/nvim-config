@@ -1,5 +1,5 @@
-require("plugin.options")
-require("plugin.commands")
+require("core.options")
+require("core.commands")
 
 --
 -- Plugins
@@ -18,21 +18,23 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = { 
+  require("plugin.package-manager-mason"),
   require("plugin.theme-vscode"),
-  require("plugin.browser-tree"),
-  require("plugin.browser-telescope"),
+  require("plugin.explorer-nvim-tree"),
+  require("plugin.finder-telescope"),
   require("plugin.keymaps-legendary"),
   require("plugin.statusline-hackline"),
-  require("plugin.editor-treesitter"),
-  require("plugin.editor-snippet"),
-  require("plugin.editor-lsp"),
-  require("plugin.editor-cmp"),
-  require("plugin.editor-outline"),
-  require("plugin.editor-autopairs"),
-  require("plugin.debug-dap"),
-  require("plugin.editor-jester"),
-  require('plugin.editor-formatter'),
-  require("plugin.package-manager-mason"),
+  require("plugin.syntax-nvim-treesitter"),
+  require("plugin.snippet-luasnip"),
+  require("plugin.lsp-nvim-lspconfig"),
+  require("plugin.lsp-nvim-cmp"),
+  require("plugin.lsp-symbols-outline"),
+  require("plugin.completion-nvim-autopairs"),
+  require('plugin.format-guard'),
+  require("plugin.debug-nvim-dap-ui"),
+  require("plugin.test-jester"),
+  "almo7aya/openingh.nvim",
+  "github/copilot.vim",
 }
 
 local opts = {}
