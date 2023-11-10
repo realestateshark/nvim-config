@@ -34,7 +34,6 @@ local plugins = {
   require("plugin.debug-nvim-dap-ui"),
   require("plugin.test-jester"),
   "almo7aya/openingh.nvim",
-  "github/copilot.vim",
 }
 
 local opts = {}
