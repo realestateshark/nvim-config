@@ -40,6 +40,7 @@ return {
         { "fc", { n = telescope.builtin }, description = "Telescope Commands", opts = default_opts },
         { "ff", { n = telescope.find_files }, description = "Telescope find files", opts = default_opts },
         { "fg", { n = telescope.live_grep }, description = "Telescope find in files", opts = default_opts },
+        { "fw", { n = telescope.grep_string }, description = "Telescope find word under cursor in files", opts = default_opts },
         { "fo", { n = telescope.buffers }, description = "Telescope list open files", opts = default_opts },
         { "fs", { n = telescope.git_status }, description = "Telescope list git status", opts = default_opts },
         { "fh", { n = telescope.help_tags }, description = "Telescope help", opts = default_opts },
@@ -47,8 +48,6 @@ return {
         { "et", { n = ":NvimTreeToggle<CR>"}, description = "Open or close explorer", opts = default_opts },
         { "ec", { n = ":NvimTreeFindFile<CR>"}, description = "Select open File in Explorer", opts = default_opts },
         { "ef", { n = ":NvimTreeFocus<CR>"}, description = "Focus Explorer", opts = default_opts },
-        -- Terminal
-        { "t", { n = ":split<CR>:term<CR><Cmd>startinsert<CR>"}, description = "Open Terminal", opts = default_opts },
         -- Legendary
         { "<C-p>", { n = function() require('legendary').find() end }, description = "Legendary command palette", opts = default_opts },
       }

@@ -21,9 +21,9 @@ local plugins = {
   require("plugin.package-manager-mason"),
   require("plugin.theme-vscode"),
   require("plugin.explorer-nvim-tree"),
+  "schillermann/nvim-statusline",
   require("plugin.finder-telescope"),
   require("plugin.keymaps-legendary"),
-  require("plugin.statusline-hackline"),
   require("plugin.syntax-nvim-treesitter"),
   require("plugin.snippet-luasnip"),
   require("plugin.lsp-nvim-lspconfig"),
@@ -34,7 +34,6 @@ local plugins = {
   require("plugin.debug-nvim-dap-ui"),
   require("plugin.test-jester"),
   "almo7aya/openingh.nvim",
-  "github/copilot.vim",
 }
 
 local opts = {}
