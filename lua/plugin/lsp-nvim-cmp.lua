@@ -37,7 +37,13 @@ return {
       TypeParameter = "󰅲",
     }
 
+    local has_words_before = function()
+      local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+      return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+    end
+
     local cmp = require("cmp")
+    local luasnip = require("luasnip")
     cmp.setup({
       formatting = {
         format = function(entry, vim_item)
@@ -62,10 +68,11 @@ return {
       },
       snippet = {
         expand = function(args)
-          require('luasnip').lsp_expand(args.body)
+          luasnip.lsp_expand(args.body)
         end,
       },
       mapping = cmp.mapping.preset.insert({
+        ["<C-Space>"] = cmp.mapping.complete(),
         ['<C-k>'] = cmp.mapping.scroll_docs(-4),
         ['<C-j>'] = cmp.mapping.scroll_docs(4),
         -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
