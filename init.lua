@@ -25,7 +25,6 @@ local plugins = {
   require("plugin.finder-telescope"),
   require("plugin.keymaps-legendary"),
   require("plugin.syntax-nvim-treesitter"),
-  require("plugin.snippet-luasnip"),
   require("plugin.lsp-nvim-lspconfig"),
   require("plugin.lsp-nvim-cmp"),
   require("plugin.lsp-symbols-outline"),
