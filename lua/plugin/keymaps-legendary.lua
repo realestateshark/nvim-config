@@ -66,12 +66,13 @@ return {
 
         require("legendary").setup {
           keymaps = {
-            { "gD", { n = vim.lsp.buf.declaration }, description = "lsp code jump to declaration", lsp_options },
-            { "gd", { n = vim.lsp.buf.definition }, description = "lsp code jump to definition", lsp_options },
-            { "gt", { n = vim.lsp.buf.type_definition }, description = "lsp code jump to type definition", lsp_options },
-            { "gi", { n = vim.lsp.buf.implementation }, description = "lsp code jump to implementation", lsp_options },
+            { "gD", { n = vim.lsp.buf.declaration }, description = "lsp go to declaration", lsp_options },
+            { "gd", { n = vim.lsp.buf.definition }, description = "lsp go to definition", lsp_options },
+            { "gt", { n = vim.lsp.buf.type_definition }, description = "lsp go to type definition", lsp_options },
+            { "gi", { n = vim.lsp.buf.implementation }, description = "lsp go to implementation", lsp_options },
             { "ck", { n = vim.lsp.buf.hover }, description = "lsp code display keyword information", lsp_options },
             { "cs", { n = vim.lsp.buf.signature_help }, description = "lsp code display signature", lsp_options },
+            { "ch", { n = vim.lsp.buf.document_highlight }, description = "lsp code highlight word", lsp_options },
             { "cr", { n = vim.lsp.buf.rename }, description = "lsp code rename references", lsp_options },
             { "cf", { n = vim.lsp.buf.format }, description = "lsp code format file", lsp_options },
             { "ca", { n = vim.lsp.buf.code_action }, description = "lsp code action", lsp_options },
