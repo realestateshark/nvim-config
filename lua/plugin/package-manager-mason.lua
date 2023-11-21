@@ -1,9 +1,11 @@
 return {
-  "williamboman/mason.nvim", -- simple to use language server installer
-  build = ":MasonUpdate", -- :MasonUpdate updates registry contents
+  "williamboman/mason.nvim",
+  build = ":MasonUpdate",
   config = function()
     require("mason").setup()
-    require("mason-lspconfig").setup()
+    require("mason-lspconfig").setup({
+      ensure_installed = { "lua_ls", "tsserver" },
+    })
   end,    
   dependencies = {
     "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
