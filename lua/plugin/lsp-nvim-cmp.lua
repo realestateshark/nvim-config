@@ -64,8 +64,8 @@ return {
         ["<C-Space>"] = cmp.mapping.complete(),
         ['<C-k>'] = cmp.mapping.scroll_docs(-4),
         ['<C-j>'] = cmp.mapping.scroll_docs(4),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), 
-        ["<Esc>"] = cmp.mapping.close(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-e>'] = cmp.mapping.abort(),
       }),
       sources = cmp.config.sources({
         { name = "copilot" },
