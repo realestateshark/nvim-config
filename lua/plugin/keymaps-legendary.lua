@@ -74,7 +74,7 @@ return {
             { "cs", { n = vim.lsp.buf.signature_help }, description = "lsp code display signature", lsp_options },
             { "ch", { n = vim.lsp.buf.document_highlight }, description = "lsp code highlight word", lsp_options },
             { "cr", { n = vim.lsp.buf.rename }, description = "lsp code rename references", lsp_options },
-            { "cf", { n = vim.lsp.buf.format }, description = "lsp code format file", lsp_options },
+            { "cf", { n = function() vim.lsp.buf.format { async = true } end, }, description = "lsp code format file", lsp_options },
             { "ca", { n = vim.lsp.buf.code_action }, description = "lsp code action", lsp_options },
             { "cR", { n = vim.lsp.buf.references }, description = "lsp code references list", lsp_options },
           }

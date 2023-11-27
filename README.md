@@ -83,7 +83,7 @@ sudo apt install wl-clipboard
 #### Clipboard
 - `"` `+` `Y` Copy to clipboard
 #### Comment
-- `Ctrl-V` `//` `Esc` Comment
+- `Ctrl-V` `SHift-I` `//` `Esc` Comment
 - `Ctrl-V` `x` Uncomment
 ### LSP
 - `Ctrl-O` Jump back

@@ -36,11 +36,6 @@ return {
       TypeParameter = "󰅲",
     }
 
-    local has_words_before = function()
-      local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-      return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-    end
-
     local cmp = require("cmp")
     cmp.setup({
       formatting = {
@@ -69,16 +64,15 @@ return {
         ["<C-Space>"] = cmp.mapping.complete(),
         ['<C-k>'] = cmp.mapping.scroll_docs(-4),
         ['<C-j>'] = cmp.mapping.scroll_docs(4),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), 
-        ["<Esc>"] = cmp.mapping.close(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-e>'] = cmp.mapping.abort(),
       }),
       sources = cmp.config.sources({
         { name = "copilot" },
         { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = "path" },
-      }),
-      experimental = { native_menu = false, ghost_text = { enabled = true } },
+      })
     })
 
     -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
@@ -101,11 +95,14 @@ return {
 
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     local lspconfig = require('lspconfig')
-    lspconfig.intelephense.setup {
+    lspconfig.intelephense.setup({
       capabilities = capabilities
-    }
-    lspconfig.tsserver.setup {
+    })
+    lspconfig.tsserver.setup({
       capabilities = capabilities
-    }
+    })
+    lspconfig.lua_ls.setup({
+      capabilities = capabilities
+    })
   end
 }
