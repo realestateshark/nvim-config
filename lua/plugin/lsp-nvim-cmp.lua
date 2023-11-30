@@ -9,6 +9,7 @@ return {
   },
   config = function()
     local kind_icons = {
+      Copilot = "",
       Text = "",
       Method = "󰆧",
       Function = "󰊕",
@@ -40,22 +41,17 @@ return {
     cmp.setup({
       formatting = {
         format = function(entry, vim_item)
-          local lspkind_ok, lspkind = pcall(require, "lspkind")
-          if not lspkind_ok then
-            -- This concatonates the icons with the name of the item kind
-            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
-            -- Source
-            vim_item.menu = ({
-              buffer = "[Buffer]",
-              nvim_lsp = "[LSP]",
-              nvim_lua = "[Lua]",
-              latex_symbols = "[LaTeX]",
-            })[entry.source.name]
-            return vim_item
-          else
-            -- From lspkind
-            return lspkind.cmp_format()(entry, vim_item)
-          end
+          -- This concatonates the icons with the name of the item kind
+          vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
+          -- Source
+          vim_item.menu = ({
+            copilot = "[Copilot]",
+            buffer = "[Buffer]",
+            nvim_lsp = "[LSP]",
+            nvim_lua = "[Lua]",
+            latex_symbols = "[LaTeX]",
+          })[entry.source.name]
+          return vim_item
         end
       },
       mapping = cmp.mapping.preset.insert({
