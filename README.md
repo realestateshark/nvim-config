@@ -51,11 +51,16 @@ Open in the terminal menu preferences and then your profile.
 Go to tab text and activate custom font and select your installed font.
 
 ## Dependencies
+### Code Formatter
 ```sh
 npm install -g prettier
 ```
 ### Clipboard
-Linux Ubuntu 22.04 with Wayland
+Linux Ubuntu with Xorg ...
+```sh
+sudo apt install xclip
+```
+... or Wayland
 ```sh
 sudo apt install wl-clipboard
 ```
