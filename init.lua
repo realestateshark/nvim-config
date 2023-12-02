@@ -17,12 +17,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = { 
+local plugins = {
   require("plugin.package-manager-mason"),
   require("plugin.theme-vscode"),
   require("plugin.explorer-nvim-tree"),
   "schillermann/nvim-statusline",
   require("plugin.finder-telescope"),
+  require("plugin.github-co-author"),
   require("plugin.keymaps-legendary"),
   require("plugin.syntax-nvim-treesitter"),
   require("plugin.lsp-nvim-lspconfig"),
