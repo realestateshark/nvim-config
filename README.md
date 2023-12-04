@@ -1,6 +1,6 @@
 # Neovim Config
 This is my personal Neovim config for web development.\
-The goal is to keep this config clean and easy.
+The goal is to be able to concentrate on the essentials of writing code without having to much information around you.
 
 Credit goes to [neovim from scrach](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ) series.
 
@@ -51,11 +51,16 @@ Open in the terminal menu preferences and then your profile.
 Go to tab text and activate custom font and select your installed font.
 
 ## Dependencies
+### Code Formatter
 ```sh
 npm install -g prettier
 ```
 ### Clipboard
-Linux Ubuntu 22.04 with Wayland
+Linux Ubuntu with Xorg ...
+```sh
+sudo apt install xclip
+```
+... or Wayland
 ```sh
 sudo apt install wl-clipboard
 ```

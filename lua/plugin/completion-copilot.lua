@@ -15,8 +15,10 @@ return {
   },
   {
     "zbirenbaum/copilot-cmp",
+    event = { "InsertEnter", "LspAttach" },
     dependencies = {
       "hrsh7th/nvim-cmp",
     },
+    opts = {}
   },
 }
